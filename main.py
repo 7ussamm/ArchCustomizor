@@ -6,6 +6,7 @@ from colorama import Fore, Back, Style
 import subprocess
 import os
 from commandLine import *
+from gui import *
 
 def mainScript():
     colorama.init()
@@ -87,8 +88,15 @@ def mainScript():
             pass
 
 
-    else:
-        pass
+    elif guiCmd == 'g':
+        try:
+            if __name__ == '__main__':
+                app = QApplication(sys.argv)
+                window = gui()
+                window.show()
+                sys.exit(app.exec_())
+        except:
+            pass
 
 if __name__ == '__main__':
     mainScript()
