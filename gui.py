@@ -125,8 +125,3 @@ class thread(QThread):
 
 
 
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    window = gui()
-    window.show()
-    sys.exit(app.exec_())
